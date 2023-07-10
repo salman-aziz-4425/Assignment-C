@@ -2,11 +2,11 @@ class IDisplayDevice{
     display(data){
         throw new Error("Not implemented");
     }
-    
+
 }
 
 //Client interaction
-class DisplayService{
+class DisplayService extends IDisplayDevice{
     outputDevice = null;
     bindoutputDevice(outputDevice){
         if(this.outputDevice === null){
@@ -18,12 +18,13 @@ class DisplayService{
     }
     display(data){
         if(this.outputDevice){
+          console.log("Output Device: "+this.outputDevice)
         try {
             JSON.parse(data);
+            console.log("JSON DATA: "+data);
         } catch (e) {
             return "Only Json format is accepted";
         }
-        return "JSON DATA: "+data;
     }
     else{
         return "Output device is not binded";
