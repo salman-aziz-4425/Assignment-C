@@ -12,7 +12,7 @@ DisplayServices.bindoutputDevice("Mobile");
 console.log(DisplayServices.display(xml));
 
 // Adapter instance
-const convertxmltojsoninstance = new convertxmltojson(xmlinstance);;
+const convertxmltojsoninstance = new convertxmltojson(xmlinstance);
 const jsonData=convertxmltojsoninstance.convertxmltojsonData();
 
 // Binding output device

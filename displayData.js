@@ -1,3 +1,10 @@
+class IDisplayDevice{
+    display(data){
+        throw new Error("Not implemented");
+    }
+    
+}
+
 //Client interaction
 class DisplayService{
     outputDevice = null;

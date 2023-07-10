@@ -1,7 +1,13 @@
 let xmlParser = require('xml2json');
+class xmlapterInterface {
+    convertxmltojsonData() {
+        throw new Error("Not implemented");
+    }
+}
 //Adapter
-class convertxmltojson{
+class convertxmltojson extends xmlapterInterface{
     constructor(xmlinstance){
+        super()
         this.xmlinstance = xmlinstance
     }
 
